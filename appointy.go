@@ -1,6 +1,7 @@
 package main
 
 import (
+	"github.com/mayankpathak10299/appointy_assignment/api"
 	"encoding/json"
 	"image"
 	"net/http"
