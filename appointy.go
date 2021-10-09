@@ -7,7 +7,19 @@ import (
 	"net/http"
 	"time"
 	"user"
+	"context"
+	"fmt"
+	"log"
+	"os"
+	"github.com/joho/godotenv"
+	"go.mongodb.org/mongo-driver/bson"
+	"go.mongodb.org/mongo-driver/mongo"
+	"go.mongodb.org/mongo-driver/mongo/options"
 )
+
+func main() {
+	api.StartServer()
+}
 
 /*Create an User*/
 type User struct {
@@ -39,7 +51,7 @@ type Post struct {
 	Id       string `json:"id"`
 	Caption  string `json:"caption"`
 	Image_url string `json:"Image_url"`
-	time     string `json:"time"`
+	PostedTimestamp time.Duration
 }
 /*Password*/
 type Password struct{
